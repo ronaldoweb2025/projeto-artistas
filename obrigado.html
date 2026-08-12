@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Resposta Confirmada | Galeria Digital para Artistas</title>
+  <meta name="description" content="Obrigado por colaborar com a pesquisa de desenvolvimento da nova galeria digital para artistas visuais.">
+
+  <meta name="theme-color" content="#435345">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="quiz-shell">
+    <header class="quiz-header">
+      <div class="quiz-header__badge">Pesquisa Concluída</div>
+    </header>
+
+    <main class="quiz-card">
+      <div class="success-card">
+        <div class="success-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+
+        <h1 class="success-card__title">Sua resposta foi registrada com sucesso!</h1>
+        
+        <p class="success-card__text">
+          Muito obrigado pela sua valiosa colaboração com o projeto. Suas opiniões e sugestões serão fundamentais para desenharmos uma ferramenta funcional, elegante e acessível para a comunidade artística.
+        </p>
+
+        <p class="success-card__text" style="font-size: 0.975rem; background-color: var(--color-accent-light); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-accent);">
+          💡 <strong>Próximos passos:</strong> Se você preencheu seus dados de contato na última etapa, entraremos em contato quando as primeiras versões de teste estiverem disponíveis!
+        </p>
+
+        <div style="margin: 2.25rem 0; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+          <a id="btn-share-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="button button--whatsapp" style="font-size: 1.05rem; padding: 0.9rem 2rem;">
+            <span>💬 Compartilhar pesquisa no WhatsApp</span>
+          </a>
+
+          <a href="index.html" class="button button--secondary">
+            ← Voltar para a página inicial
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Projeto Galeria de Artistas • Desenvolvido para a comunidade artística.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var shareBtn = document.getElementById("btn-share-whatsapp");
+      if (shareBtn) {
+        var pageUrl = window.location.origin + window.location.pathname.replace("obrigado.html", "index.html");
+        var shareText = "Estou participando de uma pesquisa sobre galerias digitais para artistas visuais. Se você também trabalha com arte, responda e ajude a construir uma solução pensada para artistas: " + pageUrl;
+        shareBtn.href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(shareText);
+      }
+    });
+  </script>
+</body>
+</html>

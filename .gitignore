@@ -1,0 +1,13 @@
+# Wrangler & Local Dev
+.wrangler/
+.env
+.env.local
+.env.production
+
+# Node / Dependencies (Se houver no futuro)
+node_modules/
+npm-debug.log*
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db

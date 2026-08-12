@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Como seria a Galeria Digital ideal para sua arte? | Pesquisa para Artistas Visuais</title>
+  <meta name="description" content="Participe da pesquisa sobre organização, apresentação e venda de obras de arte na internet. Leva apenas 3 minutos e ajudará a criar a ferramenta ideal para artistas visuais.">
+
+  <!-- SEO e Compartilhamento (Open Graph / Social) -->
+  <link rel="canonical" href="https://galeria-artistas.pages.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://galeria-artistas.pages.dev/">
+  <meta property="og:title" content="Como seria a Galeria Digital ideal para sua arte?">
+  <meta property="og:description" content="Pesquisa para artistas visuais sobre gestão de acervo, galerias digitais, catálogos e emissão de certificados.">
+  <meta property="og:image" content="https://galeria-artistas.pages.dev/favicon.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como seria a Galeria Digital ideal para sua arte?">
+  <meta name="twitter:description" content="Participe da pesquisa para artistas visuais e ajude a construir uma galeria digital feita sob medida.">
+  <meta name="twitter:image" content="https://galeria-artistas.pages.dev/favicon.svg">
+
+  <meta name="theme-color" content="#435345">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Estilos CSS do Projeto -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Dados Estruturados JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Pesquisa Galeria Digital para Artistas Visuais",
+    "url": "https://galeria-artistas.pages.dev/",
+    "description": "Pesquisa de validação para ferramentas digitais de gestão e apresentação de arte."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Região de anúncio para leitores de tela -->
+  <div id="live-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="quiz-shell" id="quiz-shell">
+    
+    <!-- Cabeçalho Principal -->
+    <header class="quiz-header" id="quiz-header">
+      <div class="quiz-header__badge">Pesquisa de Validação</div>
+      <h1 class="quiz-header__title">Galeria Digital para Artistas</h1>
+      <p class="quiz-header__subtitle">Ajude a construir uma ferramenta pensada para apresentar<br>e gerenciar suas obras na internet.</p>
+    </header>
+
+    <!-- Card Principal do Quiz -->
+    <main class="quiz-card" id="main-content">
+
+      <!-- Banner de Retomada do Rascunho -->
+      <div class="resume-banner" id="resume-banner" style="display: none;" role="alert">
+        <div class="resume-banner__title">Você possui uma pesquisa em andamento!</div>
+        <p style="font-size: 0.9rem; color: var(--color-text-muted);">Deseja continuar de onde parou ou recomeçar?</p>
+        <div class="resume-banner__actions">
+          <button type="button" class="button button--primary" id="btn-resume">Continuar de onde parei</button>
+          <button type="button" class="button button--secondary" id="btn-restart">Recomeçar pesquisa</button>
+        </div>
+      </div>
+
+      <!-- Barra de Progresso Dinâmica -->
+      <div class="progress" id="progress-container" style="display: none;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso da pesquisa">
+        <div class="progress__header">
+          <span id="progress-label" class="progress__label">Etapa 1 de 10</span>
+          <span id="progress-percent" style="color: var(--color-accent);">10%</span>
+        </div>
+        <div class="progress__track">
+          <div class="progress__bar" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Mensagens de Erro Globais -->
+      <div id="global-error-message" class="form-message form-message--error" aria-live="assertive" role="alert"></div>
+
+      <!-- TELA INICIAL (ETAPA 0) -->
+      <section class="quiz-start-card" id="quiz-start-card">
+        <div style="text-align: center; padding: 1rem 0;">
+          <h2 class="quiz-step__title" style="font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin-bottom: 1rem;">
+            “Como seria a Galeria Digital<br>ideal para sua arte?”
+          </h2>
+
+          <p style="font-size: 1.05rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto 1.5rem auto; line-height: 1.6;">
+            Com o apoio e a experiência da artista <strong>Rose Fernandes</strong>, estamos estudando a criação de uma nova ferramenta pensada especialmente para artistas visuais organizarem, apresentarem e gerenciarem suas obras na internet.
+          </p>
+
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-accent-light); padding: 0.5rem 1.25rem; border-radius: var(--radius-pill); font-weight: 600; color: var(--color-primary); margin-bottom: 2rem; border: 1px solid var(--color-accent);">
+            <span>⏱️</span>
+            <span>Leva aproximadamente 3 minutos</span>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <button type="button" class="button button--primary" id="btn-start" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+              Começar a pesquisa →
+            </button>
+          </div>
+
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); max-width: 680px; margin: 0 auto; line-height: 1.5;">
+            Sua opinião ajudará a construir uma solução feita a partir das necessidades reais dos artistas.<br>No final, quem tiver interesse poderá se candidatar aos primeiros testes.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTÊINER DAS ETAPAS DO QUIZ (ETAPAS 1 A 10) -->
+      <div id="quiz-step-container" style="display: none;"></div>
+
+      <!-- NAVEGAÇÃO DE AÇÕES (VOLTAR / CONTINUAR / ENVIAR) -->
+      <footer class="quiz-actions" id="quiz-actions" style="display: none;">
+        <button type="button" class="button button--secondary" id="btn-prev">
+          ← Voltar
+        </button>
+        
+        <div>
+          <button type="button" class="button button--primary" id="btn-next">
+            Continuar →
+          </button>
+          <button type="button" class="button button--primary button--accent" id="btn-submit" style="display: none;">
+            Enviar respostas
+          </button>
+        </div>
+      </footer>
+
+    </main>
+
+    <!-- Rodapé e Aviso de Privacidade -->
+    <footer class="site-footer">
+      <div class="privacy-notice">
+        <strong>🔒 Compromisso com a sua privacidade:</strong>
+        <ul>
+          <li>As respostas serão utilizadas exclusivamente para pesquisa e desenvolvimento da ferramenta.</li>
+          <li>Nome e dados de contato são totalmente opcionais.</li>
+          <li>Não utilizamos cookies de publicidade nem serviços de rastreamento de terceiros.</li>
+        </ul>
+      </div>
+      <p style="margin-top: 1rem;">© 2026 Projeto Galeria de Artistas • Desenvolvido para a comunidade artística.</p>
+    </footer>
+
+  </div>
+
+  <!-- Scripts JavaScript da Aplicação -->
+  <script src="js/config.example.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

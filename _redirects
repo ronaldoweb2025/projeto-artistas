@@ -1,0 +1,6 @@
+# ==============================================================================
+# REGRAS DE REDIRECIONAMENTO (Cloudflare Pages _redirects)
+# ==============================================================================
+
+/pesquisa    /index.html    301
+/obrigado    /obrigado.html 200

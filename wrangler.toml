@@ -1,0 +1,14 @@
+# ==============================================================================
+# CONFIGURAÇÃO CLOUDFLARE PAGES & D1 DATABASE (wrangler.toml)
+# ==============================================================================
+
+name = "pesquisa-galeria-artistas"
+compatibility_date = "2026-08-11"
+pages_build_output_dir = "."
+
+# Binding do Banco de Dados Cloudflare D1
+[[d1_databases]]
+binding = "DB"
+database_name = "pesquisa-galeria-artistas"
+database_id = "2340017b-374d-4425-ad0f-f5802ba0499f"
+migrations_dir = "migrations"
